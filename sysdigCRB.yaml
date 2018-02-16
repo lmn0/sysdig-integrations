@@ -1,0 +1,12 @@
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1alpha1
+metadata:
+  name: system-default-service-account
+subjects:
+  - kind: ServiceAccount
+    namespace: default  # SAMPLE
+    name: default  # SAMPLE
+roleRef:
+  kind: ClusterRole
+  name: required-access-sysdig
+  apiGroup: rbac.authorization.k8s.io
